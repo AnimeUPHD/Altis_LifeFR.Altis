@@ -34,11 +34,16 @@ _cP = 0.01;
 
 while {true} do
 {
-	if(animationState player != "AinvPknlMstpSnonWnonDnon_medic_1") then {
-		[[player,"AinvPknlMstpSnonWnonDnon_medic_1"],"life_fnc_animSync",true,false] spawn life_fnc_MP;
-		player playMoveNow "AinvPknlMstpSnonWnonDnon_medic_1";
+	if(animationState player != "AinvPknlMstpsnonWnonDnon_medic_1" ) then {
+	player action ["SwitchWeapon", player, player, 100];   //EDIT
+	player playMove "AinvPknlMstpsnonWnonDnon_medic_1"; //Durée action 6.5 secondes
+	player playActionNow "stop";
+	player playMove "AinvPknlMstpsnonWnonDnon_medic_1";
+	player playActionNow "stop";
+	player playMove "AinvPknlMstpsnonWnonDnon_medic_1";
 	};
-	sleep 0.26;
+
+	sleep 0.195; // 3 fois 6.5 secondes = 19,5secondes
 	if(isNull _ui) then {
 		5 cutRsc ["life_progress","PLAIN"];
 		_ui = uiNamespace getVariable "life_progress";
@@ -80,5 +85,6 @@ if(!_isVehicle) then {
 		[[getPlayerUID player,player getVariable["realname",name player],"215"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 		[[0,format["%1 a été vu crochetant un vehicule.",player getVariable["realname",name player]]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 		titleText["The lockpick a cassé.","PLAIN"];
+		[[_curTarget],"life_fnc_CarAlarmSound",nil,true] spawn life_fnc_MP;
 	};
 };

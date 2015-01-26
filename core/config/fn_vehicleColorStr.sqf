@@ -1,7 +1,6 @@
 /*
 	File: fn_vehicleColorStr.sqf
 	Author: Bryan "Tonic" Boardwine
-
 	Description:
 	Master configuration for color strings depending on their index location.
 */
@@ -12,6 +11,35 @@ _color = "";
 
 switch (_vehicle) do
 {
+	case "cl3_suv_taxi" :
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Taxi";};
+		};
+	};
+
+	case "ALFR_GeK_Volvo_FH16_2012" :
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Noir";};
+			case 1: {_color = "Gris Sombre";};
+			case 2: {_color = "Gris";};
+			case 3: {_color = "Gris Clair";};
+			case 4: {_color = "Blanc";};
+			case 5: {_color = "Sable";};
+			case 6: {_color = "Bordeau";};
+			case 7: {_color = "Bleu";};
+			case 8: {_color = "Bleu Nuit";};
+			case 9: {_color = "Mauve Nuit";};
+			case 10: {_color = "Vert";};
+			case 11: {_color = "Rouge";};
+			case 12: {_color = "Jaune";};
+			case 13: {_color = "Orange";};
+		};
+	};
+
 	case "ALFR_GeK_Scania_420" :
 	{
 		switch (_index) do
@@ -76,6 +104,48 @@ switch (_vehicle) do
 	};
 
 	case "RDS_Golf4_Civ_01" :
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Noir";};
+			case 1: {_color = "Gris Sombre";};
+			case 2: {_color = "Gris";};
+			case 3: {_color = "Gris Clair";};
+			case 4: {_color = "Blanc";};
+			case 5: {_color = "Sable";};
+			case 6: {_color = "Bordeau";};
+			case 7: {_color = "Bleu";};
+			case 8: {_color = "Bleu Nuit";};
+			case 9: {_color = "Mauve Nuit";};
+			case 10: {_color = "Vert";};
+			case 11: {_color = "Rouge";};
+			case 12: {_color = "Jaune";};
+			case 13: {_color = "Orange";};
+		};
+	};
+
+	case "cl3_q7_black" :
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Noir";};
+			case 1: {_color = "Gris Sombre";};
+			case 2: {_color = "Gris";};
+			case 3: {_color = "Gris Clair";};
+			case 4: {_color = "Blanc";};
+			case 5: {_color = "Sable";};
+			case 6: {_color = "Bordeau";};
+			case 7: {_color = "Bleu";};
+			case 8: {_color = "Bleu Nuit";};
+			case 9: {_color = "Mauve Nuit";};
+			case 10: {_color = "Vert";};
+			case 11: {_color = "Rouge";};
+			case 12: {_color = "Jaune";};
+			case 13: {_color = "Orange";};
+		};
+	};
+
+	case "cl3_transit_black" :
 	{
 		switch (_index) do
 		{
@@ -180,7 +250,7 @@ switch (_vehicle) do
 		};
 	};
 
-	case "DAR_TaurusCiv" :
+	case "cl3_taurus_black" :
 	{
 		switch (_index) do
 		{
@@ -632,6 +702,27 @@ switch (_vehicle) do
 		};
 	};
 
+	case "ALFR_GeK_Panamera" :
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Noir";};
+			case 1: {_color = "Gris Sombre";};
+			case 2: {_color = "Gris";};
+			case 3: {_color = "Gris Clair";};
+			case 4: {_color = "Blanc";};
+			case 5: {_color = "Sable";};
+			case 6: {_color = "Bordeau";};
+			case 7: {_color = "Bleu";};
+			case 8: {_color = "Bleu Nuit";};
+			case 9: {_color = "Mauve Nuit";};
+			case 10: {_color = "Vert";};
+			case 11: {_color = "Rouge";};
+			case 12: {_color = "Jaune";};
+			case 13: {_color = "Orange";};
+		};
+	};
+	
 	case "cl3_insignia_camo" :
 	{
 		switch (_index) do
@@ -639,7 +730,32 @@ switch (_vehicle) do
 			case 0: {_color = "Camo";};
 			case 1: {_color = "Camo Urbain";};
 			case 2: {_color = "Noir";};
-			case 3: {_color = "Noir";};
+			case 3: {_color = "Police";};
+			case 4: {_color = "Noir";};
+		};
+	};
+
+	case "insignia_police" :
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Police";};
+		};
+	};
+
+	case "range_rover_police" :
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Police";};
+		};
+	};
+	
+	case "ALFR_GeK_Panamera_Police" :
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Police";};
 		};
 	};
 
@@ -853,6 +969,30 @@ switch (_vehicle) do
 			case 16: {_color = "Wasp"};
 		};
 	};
+	
+	case "C_Heli_Light_01_civil_F":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Police"};
+			case 1: {_color = "Black"};
+			case 2: {_color = "Civ Blue"};
+			case 3: {_color = "Civ Red"};
+			case 4: {_color = "Digi Green"};
+			case 5: {_color = "Blueline"};
+			case 6: {_color = "Elliptical"};
+			case 7: {_color = "Furious"};
+			case 8: {_color = "Jeans Blue"};
+			case 9: {_color = "Speedy Redline"};
+			case 10: {_color = "Sunset"};
+			case 11: {_color = "Vrana"};
+			case 12: {_color = "Waves Blue"};
+			case 13: {_color = "Rebel Digital"};
+			case 14: {_color = "Gray"};
+			case 15: {_color = "Shadow"};
+			case 16: {_color = "Wasp"};
+		};
+	};
 
 	case "O_Heli_Light_02_unarmed_F":
 	{
@@ -977,32 +1117,23 @@ switch (_vehicle) do
 			case 0: {_color = "Black"};
 		};
 	};
-	
+
 	case "B_MRAP_01_F":
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Armée Altis"};
+			case 0: {_color = "Noir"};
 		};
 	};
-	
-	case "RDS_Ikarus_Civ_01":
+
+	case "CL3_bus_cl_black":
     {
         switch (_index) do {
-            
+
             case 0 : {_color = "Police"};
             case 1 : {_color = "Donateur"};
         };
     };
-    
-    
-    case "DAR_TaurusPolice":
-    {
-        switch (_index) do {
-            case 0 :{_color ="Police";};
-        };
-    };
-    
 
    /* case "IVORY_T6A_1":
     {
@@ -1010,8 +1141,15 @@ switch (_vehicle) do
       {
         case 0: {_color = "dogfight";};
       };
-
     };*/
+
+   case "DAR_TaurusPolice":
+   {
+        switch (_index) do
+        {
+            case 0 :{_color ="Police";};
+        };
+  };
 
 };
 

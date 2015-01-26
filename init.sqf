@@ -11,8 +11,10 @@ enableSaving[false,false];
 life_versionInfo = "Altis Life RPG v3.1.4.8";
 [] execVM "briefing.sqf"; //Load Briefing
 [] execVM "KRON_Strings.sqf";
-[] execVM "admin\fn_loop.sqf";
+[] execVM "Anticheat.sqf";
+[] execVM "AdminMenu.sqf";
 [] execVM "safezone.sqf";
-[] execVM "core\functions\fn_emptyFuel.sqf";
 
 StartProgress = true;
+
+"BIS_fnc_MP_packet" addPublicVariableEventHandler {_this call life_fnc_MPexec};

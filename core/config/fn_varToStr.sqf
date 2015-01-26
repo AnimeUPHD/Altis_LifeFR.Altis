@@ -75,6 +75,14 @@ switch (_var) do
     case "life_inv_cola": {"Coca Cola"};
     case "life_inv_frite": {"Frite"};
     case "life_inv_biere": {"Biere Pression"};
+    case "life_inv_puranium": {"Produit Uranium"};
+    case "life_inv_ipuranium": {"Produit Ill Uranium"};
+    case "life_inv_uranium1": {"Déchets d'Uranium"};
+    case "life_inv_uranium2": {"Uranium Brut"};
+    case "life_inv_uranium3": {"Uranium Purifié"};
+    case "life_inv_uranium4": {"Uranium Concentré"};
+    case "life_inv_uranium": {"Uranium"};
+	case "life_inv_menotte": {"Paire de Menottes"};
 
 	//License Block
 	case "license_civ_driver": {(localize "STR_License_Driver")};
@@ -105,7 +113,7 @@ switch (_var) do
 	case "license_civ_presse": {"Journaliste"};
 	case "license_civ_delta": {"Permis Deltaplane"};
 	case "license_tlt": {"T.L.T"};
-	case "license_he": {"H.E"};
+	case "license_he": {"A.C"};
 	case "license_lmc": {"L.M.C"};
 	case "license_bgf": {"BGF"};
 	case "license_bmg": {"BMG"};
@@ -119,4 +127,16 @@ switch (_var) do
     case "license_fst": {"F.S.T"};
     case "license_fmg": {"F.M.G"};
     case "license_sop": {"Soprano"};
+	case "license_top": {"TORRES"};
+	case "license_moa": {"M.O.A"};
+	case "license_tor": {"TOR"};
+	case "license_grf": {"G.R.F"};
+	case "license_mw": {"Moscow"};
+	case "license_poc": {"Panda of Cannabis"};
+	case "license_yk": {"Yakusa"};
+	case "license_cro": {"Cronik"};
+	case "license_cn": {"C-N"};
+	case "license_torres": {"Torres"};
+	case "license_unity": {"Unity"};
+    case "license_civ_uranium": {"Formation Uranium"};
 };

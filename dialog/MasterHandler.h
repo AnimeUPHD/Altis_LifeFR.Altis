@@ -24,4 +24,5 @@
 #include "vehicleShop.h"
 #include "settings.h"
 #include "federalReserve.h"
-#include "market.hpp"
+#include "veh_repaint.hpp"
+#include "altisslots.hpp"

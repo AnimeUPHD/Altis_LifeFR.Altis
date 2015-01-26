@@ -2,10 +2,8 @@
 /*
 	File: fn_weaponShopCfg.sqf
 	Author: Bryan "Tonic" Boardwine
-
 	Description:
 	Master configuration file for the weapon shops.
-
 	Return:
 	String: Close the menu
 	Array:
@@ -24,22 +22,20 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide != west): {"You are not a cop!"};
+			case (playerSide != west): {"You are not policier !"};
 			default
 			{
-				["Altis Cop Shop",
+				["Police",
 					[
      					["ItemWatch",nil,50],
 						["ItemCompass",nil,50],
-						["Binocular",nil,150],
 						["ItemMap",nil,50],
 						["ItemGPS",nil,150],
 						["ToolKit",nil,250],
 						["FirstAidKit",nil,150],
 						["Medikit",nil,2000],
-						["NVGoggles",nil,2500],
-						["Rangefinder",nil,3400],
-                        ["ItemRadio","Telephone",500]
+						["NVGoggles_OPFOR",nil,2500],
+						["Rangefinder",nil,3400]
 					]
 				];
 			};
@@ -50,12 +46,11 @@ switch(_shop) do
 	{
 		switch (true) do
 		{
-			case (playerSide != independent): {"You are not an EMS Medic"};
+			case (playerSide != independent): {"You are not medecin !"};
 			default {
-				["Hospital EMS Shop",
+				["Medecin",
 					[
 						["ItemWatch",nil,50],
-						["ItemRadio","Telephone",500],
 						["ItemCompass",nil,50],
 						["Binocular",nil,150],
 						["ItemMap",nil,50],
@@ -75,7 +70,7 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide != west): {"Interdit aux civils !"};
+			case (playerSide != west): {"You are not policier!"};
 			default
 			{
 				["Armurerie",
@@ -106,7 +101,7 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide != west): {"Interdit aux civils !"};
+			case (playerSide != west): {"You are not policier !"};
 			default
 			{
 				["Armurerie",
@@ -114,6 +109,8 @@ switch(_shop) do
 						//["DDOPP_X26","Tazer",2000],
 						//["DDOPP_X26_b","Tazer",2000],
 						//["DDOPP_1Rnd_X26",nil,50],
+						["arifle_sdar_F",nil,10000],
+						["20Rnd_556x45_UW_mag",nil,125],
 						["hgun_P07_snds_F","Tazer",2000],
 						["16Rnd_9x21_Mag",nil,50],
 						["hgun_ACPC2_F",nil,4500],
@@ -158,7 +155,7 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide != west): {"Interdit aux civils !"};
+			case (playerSide != west): {"You are not policier!"};
 			default
 			{
 				["Armurerie",
@@ -166,6 +163,8 @@ switch(_shop) do
 						//["DDOPP_X26","Tazer",2000],
 						//["DDOPP_X26_b","Tazer",2000],
 						//["DDOPP_1Rnd_X26",nil,50],
+						["arifle_sdar_F",nil,10000],
+						["20Rnd_556x45_UW_mag",nil,125],
 						["hgun_P07_snds_F","Tazer",2000],
 						["16Rnd_9x21_Mag",nil,50],
 						["hgun_ACPC2_F",nil,4500],
@@ -216,7 +215,7 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide != west): {"Interdit aux civils !"};
+			case (playerSide != west): {"You are not policier!"};
 			default
 			{
 				["Armurerie",
@@ -224,6 +223,8 @@ switch(_shop) do
 						//["DDOPP_X26","Tazer",2000],
 						//["DDOPP_X26_b","Tazer",2000],
 						//["DDOPP_1Rnd_X26",nil,50],
+						["arifle_sdar_F",nil,10000],
+						["20Rnd_556x45_UW_mag",nil,125],
 						["hgun_P07_snds_F","Tazer",2000],
 						["16Rnd_9x21_Mag",nil,50],
 						["hgun_ACPC2_F",nil,4500],
@@ -280,7 +281,7 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide != west): {"Interdit aux civils !"};
+			case (playerSide != west): {"You are not policier!"};
 			default
 			{
 				["Armurerie",
@@ -288,6 +289,8 @@ switch(_shop) do
 						//["DDOPP_X26","Tazer",2000],
 						//["DDOPP_X26_b","Tazer",2000],
 						//["DDOPP_1Rnd_X26",nil,50],
+						["arifle_sdar_F",nil,10000],
+						["20Rnd_556x45_UW_mag",nil,125],
 						["hgun_P07_snds_F","Tazer",2000],
 						["16Rnd_9x21_Mag",nil,50],
 						["hgun_ACPC2_F",nil,4500],
@@ -349,7 +352,7 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide != west): {"Interdit aux civils !"};
+			case (playerSide != west): {"You are not policier"};
 			default
 			{
 				["Armurerie",
@@ -357,6 +360,8 @@ switch(_shop) do
 						//["DDOPP_X26","Tazer",2000],
 						//["DDOPP_X26_b","Tazer",2000],
 						//["DDOPP_1Rnd_X26",nil,50],
+						["arifle_sdar_F",nil,10000],
+						["20Rnd_556x45_UW_mag",nil,125],
 						["hgun_P07_snds_F","Tazer",2000],
 						["16Rnd_9x21_Mag",nil,50],
 						["hgun_ACPC2_F",nil,4500],
@@ -421,7 +426,7 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide != west): {"Interdit aux civils !"};
+			case (playerSide != west): {"You are not policier!"};
 			default
 			{
 				["Armurerie",
@@ -429,6 +434,8 @@ switch(_shop) do
 						//["DDOPP_X26","Tazer",2000],
 						//["DDOPP_X26_b","Tazer",2000],
 						//["DDOPP_1Rnd_X26",nil,50],
+						["arifle_sdar_F",nil,10000],
+						["20Rnd_556x45_UW_mag",nil,125],
 						["hgun_P07_snds_F","Tazer",2000],
 						["16Rnd_9x21_Mag",nil,50],
 						["hgun_ACPC2_F",nil,4500],
@@ -494,10 +501,10 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != civilian): {"You are not a civilian!"};
-			case (!license_civ_rebel): {"Vous n'avez pas de licence rebelle !"};
+			case (!license_civ_rebel): {"You do not have to rebel license !"};
 			default
 			{
-				["Mohammed's Jihadi Shop",
+				["Rebel Armory",
 					[
 						["arifle_SDAR_F",nil,50000],
 						["arifle_TRG20_F",nil,90000],
@@ -557,10 +564,10 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != civilian): {"You are not a civilian!"};
-			case (!license_tlt): {"Vous n'etes pas BL !"};
+			case (!license_tlt): {"You are not BL !"};
 			default
 			{
-				["Armurerie Armée",
+				["Army Armory",
 					[
 
 						["hlc_rifle_ak12",nil,200000],
@@ -601,7 +608,6 @@ switch(_shop) do
 						["hlc_GRD_blue",nil,5000],
 						["hlc_GRD_orange",nil,5000],
 						["hlc_GRD_purple",nil,5000],
-						["ItemRadio","Telephone",500],
 						["SmokeShellRed","Fumigene rouge",5000]
 					]
 				];
@@ -614,10 +620,10 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != civilian): {"You are not a civilian!"};
-			case (!license_civ_gun): {"Vous n'avez pas de license d'arme à feu !"};
+			case (!license_civ_gun): {"You do not have a firearms license!"};
 			default
 			{
-				["Billy Joe's Firearms",
+				["armory",
 					[
 						["hgun_Rook40_F",nil,10000],
 						["16Rnd_9x21_Mag",nil,25],
@@ -646,7 +652,7 @@ switch(_shop) do
 				["Donator Shop",
 					[
 						["hgun_Rook40_F",nil,8000],
-						["ItemRadio","Telephone",500],
+						["hgun_Pistol_heavy_01_F",nil,10000],
 						["hgun_PDW2000_F",nil,15000],
 						["SMG_01_F",nil,20000],
 						["arifle_Mk20C_plain_F",nil,100000],
@@ -677,7 +683,9 @@ switch(_shop) do
 						["optic_Arco",nil,10000],
 						["optic_Hamr",nil,10000],
 						["optic_ACO_grn_smg",nil,2000],
+						["optic_MRD",nil,1500],
 						["acc_pointer_IR",nil,10000],
+						["NVGoggles",nil,2000],
 						["ToolKit",nil,250],
 						["itemgps",nil,150],
 						["FirstAidKit",nil,150],
@@ -696,6 +704,7 @@ switch(_shop) do
 						["Cha_100Rnd_762x54_PK_T",nil,100],
 						["16Rnd_9x21_Mag",nil,50],
 						["30Rnd_9x21_Mag",nil,60],
+						["11Rnd_45ACP_Mag",nil,50],
 						["30Rnd_45ACP_Mag_SMG_01_tracer_green",nil,60],
 						["30Rnd_556x45_Stanag",nil,70],
 						["200Rnd_65x39_cased_Box_Tracer",nil,800],
@@ -790,10 +799,9 @@ switch(_shop) do
 
 	case "genstore":
 	{
-		["Altis General Store",
+		["Gen Store",
 			[
 				["ItemWatch",nil,50],
-				["ItemRadio","Telephone",500],
 			    ["ItemCompass",nil,50],
 				["Binocular",nil,150],
 				["ItemGPS",nil,100],
@@ -808,12 +816,4 @@ switch(_shop) do
 		];
 	};
     
-    case "cellphone":
-    {
-        ["Store phone",
-            [
-                ["ItemRadio","Cellphone",500]
-            ]
-        ];
-    };
 };

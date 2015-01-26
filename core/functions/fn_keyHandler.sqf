@@ -1,4 +1,4 @@
-﻿/*
+/*
 	File: fn_keyHandler.sqf
 	Author: Bryan "Tonic" Boardwine
 
@@ -96,10 +96,6 @@ switch (_code) do
 			{
 				player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"];
 			};
-			if(license_tlt && uniform player == "U_OG_Guerilla3_2") then
-			{
-				player setObjectTextureGlobal [0, "textures\tlt_uniform.jpg"];
-			};
 			[] spawn
 			{
 				private["_handle"];
@@ -142,6 +138,24 @@ switch (_code) do
 		};
 	};
 
+	//Shift+C Zipties ( Civilians can restrain )
+	case 46:
+	{
+		if(_shift) then {_handled = true;};
+		if(_shift && license_civ_rebel && playerSide == civilian && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget in [civilian,independent]) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && speed cursorTarget < 1) then
+		{
+			if([false,"menotte",1] call life_fnc_handleInv) then
+			{
+			[] call life_fnc_restrainAction;
+			hint "You restrained him, use your interactionmenu for more options";
+			}
+				else
+				{
+				hint "Tu n'as pas de menotte!";
+				};
+		};
+	};	
+	
 	//Mouvements(f3)
 	case 61:
 	{
@@ -166,30 +180,25 @@ switch (_code) do
 		};
 	};
 	
-    //Knock out, this is experimental and yeah...
-    case 34:
-    {
-        if(_shift) then {_handled = true;};
-        if(_shift && playerSide == civilian && !isNull cursorTarget && cursorTarget isKindOf "Man" && isPlayer cursorTarget && alive cursorTarget && cursorTarget distance player < 4 && speed cursorTarget < 1) then
-        {
-        if((animationState cursorTarget) != "Incapacitated" && (currentWeapon player == primaryWeapon player OR currentWeapon player == handgunWeapon player) && currentWeapon player != "" && !life_knockout && !(player                       getVariable["restrained",false]) && !life_istazed) then
-            {
-                [cursorTarget] spawn life_fnc_knockoutAction;
-                if("ItemRadio" in assignedItems cursorTarget) then {
-                cursorTarget removeweapon "ItemRadio";
-                hint "Le téléphone portable de la personne a été placée sur le sol.";
-                _defenceplace1 = "Item_ItemRadio" createVehicle (player modelToWorld[0,0,0]);}
-                else { hint "La personne que vous n'a pas de téléphone!"};
-            };
-        };
-    };
-
+	//Knock out, this is experimental and yeah...
+	case 34:
+	{
+		if(_shift) then {_handled = true;};
+		if(_shift && playerSide == civilian && !isNull cursorTarget && cursorTarget isKindOf "Man" && isPlayer cursorTarget && alive cursorTarget && cursorTarget distance player < 4 && speed cursorTarget < 1) then
+		{
+			if((animationState cursorTarget) != "Incapacitated" && (currentWeapon player == primaryWeapon player OR currentWeapon player == handgunWeapon player) && currentWeapon player != "" && !life_knockout && !(player getVariable["restrained",false]) && !life_istazed) then
+			{
+				[cursorTarget] spawn life_fnc_knockoutAction;
+			};
+		};
+	};
+	
 	//Report ALT-F4
 	case 62:
     {
     if(_alt && !_shift) then {
-    diag_log format ["Anti-Cheat: %1 utilise ALT+F4 pour se deconnecter (Merci de le report aux Admins)",player getVariable["realname",name player]];
-    [[1,format["Anti-Cheat: %1 utilise ALT+F4 pour se deconnecter (Merci de le report aux Admins)",player getVariable["realname",name player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+    diag_log format ["Anti-Cheat: %1 utilise ALT+F4 pour se deconnecter (Merci de le report aux Admins)",_player getVariable["realname",name _player]];
+    [[1,format["Anti-Cheat: %1 utilise ALT+F4 pour se deconnecter (Merci de le report aux Admins)",_player getVariable["realname",name _player]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
     };
     };
 	/*
@@ -271,17 +280,6 @@ switch (_code) do
 	//F Key
 	case 33:
 	{
-		if(_shift && !_ctrlKey && currentWeapon player != "") then {
-			life_curWep_h = currentWeapon player;
-			player action ["SwitchWeapon", player, player, 100];
-			player switchcamera cameraView;
-		};
-
-		if(!_shift && _ctrlKey && !isNil "life_curWep_h" && {(life_curWep_h != "")}) then {
-			if(life_curWep_h in [primaryWeapon player,secondaryWeapon player,handgunWeapon player]) then {
-				player selectWeapon life_curWep_h;
-			};
-		};
 		if(playerSide in [west,independent] && vehicle player != player && !life_siren_active && ((driver vehicle player) == player)) then
 		{
 			[] spawn
@@ -361,6 +359,15 @@ switch (_code) do
 			};
 		};
 	};
+	//Shift+P = Faded Sound
+    case 25:
+    {
+        if(_shift) then
+        {
+            [] call life_fnc_fadeSound;
+            _handled = true;
+        };
+    };
 };
 
 _handled;

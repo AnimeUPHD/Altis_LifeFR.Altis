@@ -54,6 +54,18 @@ class Life_Client_Core
 		class adminMenu {};
 		class adminQuery {};
 	};
+    
+    class Casino
+	{
+		file = "core\casino";
+		class slotInit {};
+		class slotPlay {};
+		class slotRandom {};
+		class slotRewards {};
+		class casMusic {};
+		class casino777 {};
+		class casino {};
+	};
 	
 	class Medical_System
 	{
@@ -73,15 +85,6 @@ class Life_Client_Core
 		class medicSiren {};
 	};
 	
-	class economy
-	{
-		file = "core\economy";
-		class virt_updatePrice {};
-		class addsubstract {};
-		class openEconomy {};
-		class virt_updateEconomy {};
-	};
-
 	class Actions
 	{
 		file = "core\actions";
@@ -93,8 +96,10 @@ class Life_Client_Core
 		class catchFish {};
 		class catchTurtle {};
 		class dpFinish {};
+		class dTruckFinish {};
 		class dropFishingNet {};
 		class getDPMission {};
+		class getTruckMission {};
 		class postBail {};
 		class processAction {};
 		class arrestAction {};
@@ -123,6 +128,10 @@ class Life_Client_Core
 		class gather {};
 		class surrender {};
 		class seizeObjects {};
+        class gatherUranium {};
+        class processActionDual {};
+        class processActionLsd {};
+        class robShops {};
 	};
 	
 	class Housing
@@ -194,7 +203,6 @@ class Life_Client_Core
 		class updateViewDistance {};
 		class settingsMenu {};
 		class settingsInit {};
-        class cellphone2 {};
 	};
 	
 	class Functions
@@ -240,7 +248,8 @@ class Life_Client_Core
 		class loadGear {};
 		class loadCopGear {};
 		class stripDownPlayer {};
-        class emptyFuel{};
+		class playSound {};
+        class fadeSound {};
 	};
 	
 	class Network
@@ -279,6 +288,7 @@ class Life_Client_Core
 		class removeLicenses {};
 		class demoChargeTimer {};
 		class civLoadout {};
+		class civInteractionMenu {};
 	};
 	
 	class Vehicle
@@ -413,4 +423,13 @@ class Life_Client_Core
 		class vehicleGarage {};
 		class gangDeposit {};
 	};
+    
+    class anstrich
+    {
+        file = "core\repaint";
+        
+        class RepaintMenu;
+        class Repaintcolor;
+        class RepaintVehicle;        
+    };
 };

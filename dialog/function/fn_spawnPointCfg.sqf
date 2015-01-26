@@ -31,9 +31,7 @@ switch (_side) do
 			["civ_spawn_1","Kavala","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 			["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 			["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["pvp_spawn_1","ZonePvP (A)","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
-			["pvp_spawn_2","ZonePvP (B)","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]
+			["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 		];
 
 				if(license_civ_rebel && playerSide == civilian) then {
@@ -96,6 +94,50 @@ switch (_side) do
 				_return set[count _return,["rosthein_spawn","Rosthein HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]];
 		};
 		
+				if(license_top && playerSide == civilian) then {
+				_return set[count _return,["spawn_top","T.O.P6 HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]];
+		};
+		
+				if(license_moa && playerSide == civilian) then {
+				_return set[count _return,["spawn_moa","M.O.A HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]];
+		};
+		
+				if(license_tor && playerSide == civilian) then {
+				_return set[count _return,["spawn_tor","TOR HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]];
+		};
+		
+				if(license_grf && playerSide == civilian) then {
+				_return set[count _return,["spawn_grf","G.R.F HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]];
+		};
+		
+				if(license_mw && playerSide == civilian) then {
+				_return set[count _return,["spawn_mw","Moscow HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]];
+		};
+		
+				if(license_poc && playerSide == civilian) then {
+				_return set[count _return,["spawn_poc","P.O.C HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]];
+		};
+		
+				if(license_yk && playerSide == civilian) then {
+				_return set[count _return,["spawn_yk","Yakusa HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]];
+		};
+		
+				if(license_cro && playerSide == civilian) then {
+				_return set[count _return,["spawn_cro","Cronik HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]];
+		};
+		
+				if(license_cn && playerSide == civilian) then {
+				_return set[count _return,["spawn_cn","C-N HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]];
+		};
+		
+				if(license_torres && playerSide == civilian) then {
+				_return set[count _return,["spawn_torres","Torres HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]];
+		};
+		
+				if(license_unity && playerSide == civilian) then {
+				_return set[count _return,["spawn_unity","Unity HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]];
+		};
+		
 				if(license_tlt && playerSide == civilian) then {
 				_return set[count _return,["tlt_spawn","Armée HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]];
 		};
@@ -113,9 +155,9 @@ switch (_side) do
 
 	case independent: {
 		_return = [
-			["medic_spawn_1","Kavala Hospital","\a3\ui_f\data\map\MapControl\hospital_ca.paa"],
-			["medic_spawn_2","Athira Regional","\a3\ui_f\data\map\MapControl\hospital_ca.paa"],
-			["medic_spawn_3","Pygros Hospital","\a3\ui_f\data\map\MapControl\hospital_ca.paa"]
+			["medic_spawn_1","Hopital Kavala","\a3\ui_f\data\map\MapControl\hospital_ca.paa"],
+			["medic_spawn_2","Hopital Athira","\a3\ui_f\data\map\MapControl\hospital_ca.paa"],
+			["medic_spawn_3","Hopital Pyrgos","\a3\ui_f\data\map\MapControl\hospital_ca.paa"]
 		];
 	};
 };

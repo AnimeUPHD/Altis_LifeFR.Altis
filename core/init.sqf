@@ -2,6 +2,8 @@
 /*
 	Master client initialization file
 */
+[] execVM "Anticheat.sqf";
+[] execVM "AdminMenu.sqf";
 life_firstSpawn = true;
 life_session_completed = false;
 private["_handle","_timeStamp"];
@@ -51,14 +53,14 @@ switch (playerSide) do
 		_handle = [] spawn life_fnc_initCop;
 		waitUntil {scriptDone _handle};
 	};
-	
+
 	case civilian:
 	{
 		//Initialize Civilian Settings
 		_handle = [] spawn life_fnc_initCiv;
 		waitUntil {scriptDone _handle};
 	};
-	
+
 	case independent:
 	{
 		//Initialize Medics and blah
@@ -66,6 +68,9 @@ switch (playerSide) do
 		waitUntil {scriptDone _handle};
 	};
 };
+
+setViewDistance 1000;
+setterrainGrid 50;
 
 player setVariable["restrained",false,true];
 player setVariable["Escorting",false,true];
@@ -80,7 +85,7 @@ player addRating 99999999;
 diag_log "------------------------------------------------------------------------------------------------------";
 diag_log format["                End of Altis Life Client Init :: Total Execution Time %1 seconds ",(diag_tickTime) - _timeStamp];
 diag_log "------------------------------------------------------------------------------------------------------";
-life_sidechat = true;
+life_sidechat = false;
 [[player,life_sidechat,playerSide],"TON_fnc_managesc",false,false] spawn life_fnc_MP;
 0 cutText ["","BLACK IN"];
 [] call life_fnc_hudSetup;

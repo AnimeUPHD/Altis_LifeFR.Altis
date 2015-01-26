@@ -43,6 +43,8 @@ switch (_filter) do
 	//Hats
 	case 1:
 	{
+		_ret set[count _ret,["H_MilCap_blue",nil,75]];
+	
 		if(__GETC__(life_coplevel) > 1) then
 		{
 			_ret set[count _ret,["H_Beret_blk",nil,100]];
@@ -102,7 +104,8 @@ switch (_filter) do
 			["B_Kitbag_blk",nil,1700],
 			["B_Bergen_sgg",nil,2500],
 			["B_Carryall_cbr",nil,3500],
-            ["ALFR_Police_Bags",nil,1100]
+			["ALFR_Police_Bags",nil,1100],
+			["B_UAV_01_backpack_F",nil,5000]
 		];
 	};
 };

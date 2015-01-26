@@ -1,7 +1,7 @@
 /*
 	File: fn_vehicleWeightCfg.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Master configuration for vehicle weight.
 */
@@ -70,6 +70,7 @@ switch (_className) do
 	case "C_Boat_Civil_01_police_F": {85};
 	case "C_Boat_Civil_01_rescue_F": {85};
 	case "ALFR_GeK_Scania_420": {600};
+	case "ALFR_GeK_Volvo_FH16_2012": {700};
 	case "cl3_veyron_wht_blu": {10};
 	case "B_Truck_01_box_F": {600};
 	case "B_Truck_01_covered_F": {500};
@@ -78,9 +79,16 @@ switch (_className) do
 	case "O_MRAP_02_F": {60};
 	case "I_MRAP_03_F": {58};
 	case "B_Heli_Light_01_F": {50};
+	case "C_Heli_Light_01_civil_F": {50};
+	case "O_Heli_Transport_04_bench_F": {5};
 	case "I_Heli_light_03_unarmed_F": {100};
 	case "O_Heli_Light_02_unarmed_F": {100};
+	case "O_Heli_Transport_04_covered_F": {100};
+	case "O_Heli_Transport_04_ammo_F": {110};
+	case "B_Heli_Transport_03_F": {100};
+	case "O_Heli_Transport_04_F": {5};
 	case "I_Heli_Transport_02_F": {175};
+	case "B_Heli_Transport_03_unarmed_F": {175};
 	case "C_Rubberboat": {45};
 	case "O_Boat_Armed_01_hmg_F": {175};
 	case "B_Boat_Armed_01_minigun_F": {175};
@@ -94,7 +102,14 @@ switch (_className) do
 	case "Land_CargoBox_V1_F": {5000};
 	case "Box_IND_Grenades_F": {350};
 	case "B_supplyCrate_F": {700};
-    case "RDS_Ikarus_Civ_01": {80};
-    case "ALFR_Armee_Hummingbird": {50};
+    case "CL3_bus_cl_black": {80};
+    case "cl3_suv_taxi": {100};
+    case "cl3_suv_black": {100};
+    case "cl3_taurus_black": {55};
+    case "BAF_Offroad_D": {80};
+    case "BAF_Offroad_W": {80};
+	case "cl3_q7_black": {80};
+	case "cl3_transit_black": {140};
+	case "ivory_b206": {70};
 	default {-1};
 };

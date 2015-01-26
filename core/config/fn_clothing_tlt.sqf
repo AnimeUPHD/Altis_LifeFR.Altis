@@ -1,4 +1,4 @@
-/*
+﻿/*
 	File: fn_clothing_bl.sqf
 	Author: Bryan "Tonic" Boardwine
 	
@@ -18,9 +18,7 @@ switch (_filter) do
 	case 0:
 	{
 		[
-			["U_OG_Guerilla3_2","Hunter Green",500],
-            ["ALFR_FR_Armee_Base", "Uniforme Armee",500]
-
+			["U_OG_Guerilla3_2","Hunter Green",500]
 		];
 	};
 	
@@ -90,8 +88,7 @@ switch (_filter) do
 			["V_Chestrig_blk",nil,15000],
 			["V_TacVest_blk",nil,12500],
 			["V_TacVestIR_blk",nil,12500],
-			["V_BandollierB_blk",nil,4500],
-            ["ALFR_armee_gilet",nil,4500]
+			["V_BandollierB_blk",nil,4500]
 		];
 	};
 	
@@ -121,8 +118,7 @@ switch (_filter) do
 			["B_Carryall_oli",nil,2500],
 			["B_Carryall_khk",nil,2500],
 			["B_Carryall_cbr",nil,2500],
-			["B_Parachute",nil,2500],
-            ["ALFR_armee_Bags",nil,2500]
+			["B_Parachute",nil,2500]
 		];
 	};
 };

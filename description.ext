@@ -47,7 +47,42 @@ class CfgSounds
 		name = "MachineMinage";
 		sound[] = {"\sounds\minage_machine_altislifefr.ogg", 1.0, 1};
 		titles[] = {};
-	}
+	};
+	
+    class alarme_magasin
+    {
+        name = "alarme_magasin";
+        sound[] = {"\sounds\alarme_magasin.ogg", 1, 1};
+        titles[] = {};
+	};
+	
+	class spraycan
+    {
+        name = "spraycan";
+        sound[] = {"\sounds\spraycan.ogg", 1, 1};
+        titles[] = {};
+	};
+    
+    class casMusic
+    {
+        name = "casMusic";	
+		sound[] = {"\sounds\casino.ogg", 1, 1};
+		titles[] = {};
+    };
+    
+    class slot_spin
+	{
+		name = "slot_spin";
+		sound[] = {"\sounds\slot_spin.ogg", 1, 1};
+		titles[] = {1, ""};
+	};
+    
+    class slot_payoff
+	{
+		name = "slot_payoff";
+		sound[] = {"\sounds\slot_payoff.ogg", 1, 1};
+		titles[] = {1, ""};
+	};
 	
 	class SirenLong
 	{
@@ -150,7 +185,7 @@ class CfgSounds
   class car_alarm
 	{
 		name="car_alarm";
-		sound[] = {"\sounds\alarmevoiture.ogg", 1, 1};
+		sound[] = {"\sounds\car_alarm.ogg", 1, 1};
 		titles[] = {};
 	
 	};
